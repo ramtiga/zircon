@@ -9,7 +9,7 @@ class Zircon
         @text    = text
         @prefix  = match[1]
         @command = match[2]
-        @rest    = match[3..-1]
+        @rest    = match[3..-1].to_s
       else
         raise ArgumentError.new("Invalid message: #{text}")
       end
